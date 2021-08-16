@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="./Files/style.css">
+    <!-- Main JS File -->
+    <script src="./Files/app.js" defer></script>
+    <!-- Google Fonts CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <!-- Titel -->
+    <title>Color Guessing Game</title>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="heading">
+            <h1>The Great <span class="colorDisplay"> RGB(58, 51, 32) </span> Guessing Game</h1>
+        </div>
+        <div class="modeReset">
+            <div class="button">
+                <button class="reset">New Colors</button>
+            </div>
+            <span class="messageDisplay">play Again</span>
+            <div class="modes">
+                <button class="mode">Easy</button>
+                <button class="mode selected">Hard</button>
+            </div>
+        </div>
+        <div class="allBoxes">
+            <div class="squares" id="box1"></div>
+            <div class="squares" id="box2"></div>
+            <div class="squares" id="box3"></div>
+            <div class="squares rmv" id="box4"></div>
+            <div class="squares rmv" id="box5"></div>
+            <div class="squares rmv" id="box6"></div>
+        </div>
+    </div>
+</body>
+
+</html>
