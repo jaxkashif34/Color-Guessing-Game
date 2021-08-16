@@ -105,8 +105,8 @@ body .mainContainer .allBoxes {
   place-content: center;
   -ms-grid-rows: (150px)[2];
       grid-template-rows: repeat(2, 150px);
-  -ms-grid-columns: (150px)[3];
-      grid-template-columns: repeat(3, 150px);
+  -ms-grid-columns: (minmax(100px, 150px))[3];
+      grid-template-columns: repeat(3, minmax(100px, 150px));
 }
 
 body .mainContainer .allBoxes .squares {

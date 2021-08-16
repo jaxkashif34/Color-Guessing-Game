@@ -69,7 +69,7 @@ body {
             grid-gap: 20px;
             place-content: center;
             grid-template-rows: repeat(2, 150px);
-            grid-template-columns: repeat(3, 150px);
+            grid-template-columns: repeat(3, minmax(100px, 150px));
             .squares {
                 background-color: aqua;
                 border-radius: 10px;
