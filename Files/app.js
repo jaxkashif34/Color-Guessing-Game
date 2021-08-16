@@ -1,6 +1,6 @@
 // console.log("Kashif")
 let colors = [];
-let numSquares = 6;
+let numSquares = 12;
 let pickedColor;
 
 const square = document.querySelectorAll(".squares");
@@ -10,6 +10,10 @@ const h1 = document.querySelector(".heading")
 const resetButton = document.querySelector(".reset")
 const modeButtons = document.querySelectorAll(".mode")
 const removeAble = document.querySelectorAll(".rmv");
+const exrtem = document.querySelectorAll(".extrem")
+const allBoxes = document.querySelector(".allBoxes")
+
+// console.log(allBoxes)
 
 init();
 
@@ -51,11 +55,16 @@ function setupMode() {
             this.classList.add("selected")
             if (this.textContent === "Easy") {
                 numSquares = 3
-                if(numSquares===3)[
+                if (numSquares === 3) [
                     removeAbleFnc()
                 ]
-            } else {
+            } else if (this.textContent === "Hard") {
                 numSquares = 6
+                addableFnc()
+            }
+            else {
+                numSquares = 12
+                exrtemFnc();
             }
             reset()
         })
@@ -64,10 +73,28 @@ function setupMode() {
 
 
 function removeAbleFnc() {
-    for (let i = 0; removeAble.length; i++) {
+    for (let i = 0; i < removeAble.length; i++) {
         removeAble[i].classList.add("removeable")
     }
+
 }
+
+function addableFnc() {
+    for (let i = 0; i < removeAble.length; i++) {
+        removeAble[i].classList.remove("removeable")
+    }
+    for (let i = 0; i < exrtem.length; i++) {
+        exrtem[i].classList.add("removeable")
+    }
+}
+
+function exrtemFnc() {
+    for (let i = 0; i < removeAble.length; i++) {
+        removeAble[i].classList.remove("removeable")
+    }
+}
+
+
 
 
 function reset() {
